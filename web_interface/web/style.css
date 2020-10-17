@@ -1,0 +1,116 @@
+/*Main menu page header style section*/
+header.mmenu {
+    background-color: #1a1a1a;
+    position: absolute;
+    top:0%; left:0%;
+    width: 100%;
+    min-width: 800px;
+    height: 20%;
+    margin: 0px;
+    }
+    
+    /*Other pages header*/
+header.other{
+    background-color: #1a1a1a;
+    position: absolute;
+    top:0%; left:0%;
+    width: 100%;
+    min-width: 800px;
+    height: 10%;
+    margin: 0px;
+    }
+
+section.mmenu {
+    background-color: #111111;
+	position: absolute;
+	top: 20%; left:0%;
+	width: 100%;
+	min-width: 800px;
+	height: 70%;
+	font-size: 40px;
+	font-family: Arial;
+	color:white;
+	margin: 0px;
+	border-top: solid 1px #909090;
+    }
+section.other{
+    background-color: #111111;
+    position: absolute;
+    top: 10%; left:0%;
+    width: 100%;
+    min-width: 800px;
+    height: 80%;
+    font-size: 40px;
+    font-family: Arial;
+    color:white;
+    margin: 0px;
+    border-top: solid 1px #909090;
+    }
+section.mmenu.button, section.other.button, button{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    width: 60%;
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 75%;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+/*Main menu page heading*/    
+p.mmenu_heading{
+    height: 80%;
+    margin: 0px;
+    position: relative;
+    top:10%; left:0%;
+    font-family: arial;
+    font-size: 9ex;
+    font-style: normal; 
+    text-align: center;
+    color: #909090;
+    }
+    /*Other pages heading*/
+p.other_heading{
+    height: 90%; 
+	margin: 0px;
+	font-family: arial;
+	font-size: 4.5ex;
+	font-style: normal; 
+	text-align: left;
+	color: #909090;
+    }
+p.labels{
+    background-color: #0d0d0d;
+    color: #909090;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 60%;
+    margin: 0px 2px;
+    }
+p.text, input.text, select.text{
+    background-color: #0d0d0d;
+    height: 100%;
+    border: none;
+    color: #909090;
+    font-size: 80%;
+    text-align: center;
+    margin: 0px 2px;
+    }
+/**/
+footer{
+    background-color: #1a1a1a;
+    position: absolute;
+    top:90%; left:0%;
+    min-width: 800px;
+    width: 100%;
+    height: 10%;
+    font-family: Arial;
+    font-size: 15px;
+    font-style:normal;
+    color:white;
+    margin: 0px;
+    border-top: solid 1px #909090;
+    }

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Semiconductor tester </title>
+    </head>
+
+    <body>
+		<header class="other">
+			<p class="other_heading"> - Measure </p>
+        </header>
+    
+		<section class="other">
+            <p  class="labels" 
+                style="border-top: solid 1px #909090; 
+                       border-left: solid 1px #909090;
+                       width: 20%;
+                       height: 10%;
+                       position: absolute;
+                       left: 2%; top: 10%;">Device name</p>
+            <p  class="labels" 
+                style="border-top: solid 1px #909090; 
+                       border-left: dashed 1px #909090;
+                       width: 20%;
+                       height: 10%;
+                       position: absolute;
+                       left: 22%; top: 10%;">Device type</p>
+            <p  class="labels" 
+                style="border-top: solid 1px #909090; 
+                       border-left: dashed 1px #909090;
+                       width: 10%;
+                       height: 10%;
+                       position: absolute;
+                       left: 42%; top: 10%;"> Socket </p>
+            <p  class="labels" 
+                style="border-top: solid 1px #909090; 
+                       border-left: dashed 1px #909090;
+                       width: 8%;
+                       height: 10%;
+                       position: absolute;
+                       left: 52%; top: 10%;"> Ub,V </p>
+            <p  class="labels" 
+                style="border-top: solid 1px #909090; 
+                       border-left: dashed 1px #909090;
+                       width: 8%;
+                       height: 10%;
+                       position: absolute;
+                       left: 60%; top: 10%;"> Uc,V </p>
+            <p  class="labels" 
+                style="border-top: solid 1px #909090; 
+                       border-left: dashed 1px #909090;
+                       width: 10%;
+                       height: 10%;
+                       position: absolute;
+                       left: 68%; top: 10%;"> Ib,mA </p>
+            <p  class="labels" 
+                style="border-top: solid 1px #909090; 
+                       border-left: dashed 1px #909090;
+                       width: 10%;
+                       height: 10%;
+                       position: absolute;
+                       left: 78%; top: 10%;"> Ic,mA </p>
+            <p  class="labels" 
+                style="border-top: solid 1px #909090; 
+                       border-left: dashed 1px #909090;
+                       border-right: solid 1px #909090;
+                       width: 10%;
+                       height: 10%;
+                       position: absolute;
+                       left: 88%; top: 10%;"> h21e </p>
+            
+            <div>
+                <p  class="labels"
+                    style="border-left: solid 1px #909090; 
+                           width: 20%;
+                           height: 10%;
+                           position: absolute;
+                           left: 2%; top: 20%;">
+                           <label class="labels" id="deviceType" value=""> KT 315 </label></p>
+                            
+                <p  class="labels" 
+                    style="border-left: dashed 1px #909090;
+                           width: 20%;
+                           height: 10%;
+                           position: absolute;
+                           left: 22%; top: 20%;">
+                           <label class="labels" id="deviceType" value=""> NPN </label></p>
+                <p  class="labels" 
+                    style="border-left: dashed 1px #909090;
+                           width: 10%;
+                           height: 10%;
+                           position: absolute;
+                           left: 42%; top: 20%;">
+                           <label class="labels" id="Socket" value=""> A </label></p>
+                <p  class="labels" 
+                    style="border-left: dashed 1px #909090;
+                           width: 8%;
+                           height: 10%;
+                           position: absolute;
+                           left: 52%; top: 20%;">
+                           <label class="labels" id="Ub" value=""> 5 </label></p>
+                <p  class="labels" 
+                    style="border-left: dashed 1px #909090;
+                           width: 8%;
+                           height: 10%;
+                           position: absolute;
+                           left: 60%; top: 20%;">
+                           <label class="labels" id="Uc" value=""> 30 </label></p>
+                <p  class="labels" 
+                    style="border-left: dashed 1px #909090;
+                           width: 10%;
+                           height: 10%;
+                           position: absolute;
+                           left: 68%; top: 20%;">
+                           <label class="labels" id="Ib" value=""> 1 </label></p>
+                <p  class="labels" 
+                    style="border-left: dashed 1px #909090;
+                           width: 10%;
+                           height: 10%;
+                           position: absolute;
+                           left: 78%; top: 20%;">
+                           <label class="labels" id="Ic" value=""> 100 </label></p>
+                <p  class="labels" 
+                    style="border-left: dashed 1px #909090;
+                           border-right: solid 1px #909090;
+                           width: 10%;
+                           height: 10%;
+                           position: absolute;
+                           left: 88%; top: 20%;">
+                           <label class="labels" id="h21e" value=""> 120 </label></p>
+            </div>
+
+            <p  class="labels" 
+                style="border-top: dashed 1px #909090; 
+                       border-left: solid 1px #909090;
+                       width: 20%;
+                       height: 10%;
+                       position: absolute;
+                       left: 2%; top: 30%;"> Process </p>
+            <p  class="labels" 
+                style="border-top: dashed 1px #909090; 
+                       border-left: dashed 1px #909090;
+                       width: 20%;
+                       height: 10%;
+                       position: absolute;
+                       left: 22%; top: 30%;"> Time to end</p>
+            <p  class="labels" 
+                style="border-top: dashed 1px #909090; 
+                       border-left: dashed 1px #909090;
+                       width: 18%;
+                       height: 10%;
+                       position: absolute;
+                       left: 42%; top: 30%;"> Alpha </p>
+            <p  class="labels" 
+                style="border-top: dashed 1px #909090; 
+                       border-left: dashed 1px #909090;
+                       width: 18%;
+                       height: 10%;
+                       position: absolute;
+                       left: 60%; top: 30%;"> Beta </p>
+            <p  class="labels" 
+                style="border-top: dashed 1px #909090; 
+                       border-left: dashed 1px #909090;
+                       border-right: solid 1px #909090;
+                       width: 20%;
+                       height: 10%;
+                       position: absolute;
+                       left: 78%; top: 30%;"> Status </p>
+            
+            <div>
+                    <p  class="labels"
+                        style="border-left: solid 1px #909090; 
+                               border-bottom: solid 1px #909090;
+                               width: 20%;
+                               height: 10%;
+                               position: absolute;
+                               left: 2%; top: 40%;">
+                               <label class="labels" id="process" value="">  </label></p>
+                                
+                    <p  class="labels" 
+                        style="border-bottom: solid 1px #909090; 
+                               border-left: dashed 1px #909090;
+                               width: 20%;
+                               height: 10%;
+                               position: absolute;
+                               left: 22%; top: 40%;">
+                               <label class="labels" id="timetoend" value=""> </label></p>
+                    <p  class="labels" 
+                        style="border-bottom: solid 1px #909090; 
+                               border-left: dashed 1px #909090;
+                               width: 18%;
+                               height: 10%;
+                               position: absolute;
+                               left: 42%; top: 40%;">
+                               <label class="labels" id="alpha" value="">  </label></p>
+                    <p  class="labels" 
+                        style="border-bottom: solid 1px #909090; 
+                               border-left: dashed 1px #909090;
+                               width: 18%;
+                               height: 10%;
+                               position: absolute;
+                               left: 60%; top: 40%;">
+                               <label class="labels" id="beta" value=""> </label></p>
+                    <p  class="labels" 
+                        style="border-bottom: solid 1px #909090; 
+                               border-left: dashed 1px #909090;
+                               border-right: solid 1px #909090;
+                               width: 20%;
+                               height: 10%;
+                               position: absolute;
+                               left: 78%; top: 40%;">
+                               <label class="labels" id="status" value="">  </label></p>
+                </div>
+
+
+            <p style = "position:absolute;top:60%; width:100%; height: 15%; text-align: center; margin: 0px;">
+                <button class = "button" name="start_stop" id="start_stop" value="off" onclick="btnClick()"> </button>
+            </p>
+
+			<p style = "position:absolute;top:80%; width:100%; height: 15%; text-align: center; margin: 0px;">
+                <a href="mmenu.html"> <button class = "button"> Back </button> </a>
+            </p>
+            
+		</section>
+		
+		<footer class="other">
+                <p style = "margin: 0px; position:absolute;bottom:10%;left:50px;color:#b0b0b0; font-size-adjust: inherit;">
+				Copyright © Your mother's friend's son. 2020
+			</p>
+		</footer>
+        
+        <script>
+            let timeToEnd = 60
+            let btnStatus = document.getElementById("start_stop").value
+            if(btnStatus == "off") {
+                document.getElementById("start_stop").textContent = "Start measurement"
+            }
+            else if(btnStatus == "on"){
+                document.getElementById("start_stop").textContent = "Stop measurement"
+            }
+
+            function btnClick(){
+                if(document.getElementById("start_stop").value == "off") {
+                    document.getElementById("start_stop").textContent = "Stop measurement"
+                    document.getElementById("start_stop").value = "on"
+                    singleMeas()
+                }
+                else{
+                    document.getElementById("start_stop").textContent = "Start measurement"
+                    document.getElementById("start_stop").value = "off"
+                }
+            }
+
+            function singleMeas(){
+                document.getElementById("timetoend").textContent = timeToEnd + " sec"
+                document.getElementById("timetoend").value = timeToEnd
+                switch(timeToEnd){
+                    case  0: 
+                        document.getElementById("process").textContent = "Finish"
+                        document.getElementById("status").textContent = "OK" 
+                        break
+                    case 19: 
+                        document.getElementById("process").textContent = "Measure Rc"
+                        break
+                    case 29: 
+                        document.getElementById("process").textContent = "Measure Re"
+                        break
+                    case 39: 
+                        document.getElementById("process").textContent = "Measure Rb"
+                        document.getElementById("beta").textContent = "120"                        
+                        break
+                    case 49: 
+                        document.getElementById("process").textContent = "Measure beta"
+                        document.getElementById("alpha").textContent = "0.98"                        
+                        break
+                    case 59: 
+                        document.getElementById("process").textContent = "Measure alpha"
+                        break
+                    case 60: 
+                        document.getElementById("process").textContent = "Start"
+                        document.getElementById("status").textContent = "Unknown" 
+                        break
+                }
+                //console.log(timeToEnd)
+                if(!timeToEnd || document.getElementById("start_stop").value == "off"){
+                    document.getElementById("start_stop").textContent = "Start measurement"
+                    document.getElementById("start_stop").value = "off"
+                    timeToEnd = 60
+                    //document.getElementById("timetoend").textContent = timeToEnd + " sec"
+                    //document.getElementById("timetoend").value = timeToEnd
+                    return
+                }
+                timeToEnd--
+                setTimeout(singleMeas, 1000)
+            }
+        </script>
+	</body>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</html>

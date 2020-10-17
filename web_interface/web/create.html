@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Semiconductor tester </title>
+    </head>
+
+    <body>
+		<header class="other">
+			<p class="other_heading"> - Create new device </p>
+        </header>
+    
+		<section class="other">
+			<p  class="labels" 
+				style="border-top: solid 1px #909090; 
+					   border-left: solid 1px #909090;
+					   width: 20%;
+					   height: 10%;
+					   position: absolute;
+					   left: 2%; top: 10%;">Device name</p>
+			<p  class="labels" 
+				style="border-top: solid 1px #909090; 
+					   border-left: dashed 1px #909090;
+					   width: 20%;
+					   height: 10%;
+					   position: absolute;
+					   left: 22%; top: 10%;">Device type</p>
+			<p  class="labels" 
+				style="border-top: solid 1px #909090; 
+					   border-left: dashed 1px #909090;
+					   width: 10%;
+					   height: 10%;
+					   position: absolute;
+					   left: 42%; top: 10%;"> Socket </p>
+			<p  class="labels" 
+				style="border-top: solid 1px #909090; 
+					   border-left: dashed 1px #909090;
+					   width: 8%;
+					   height: 10%;
+					   position: absolute;
+					   left: 52%; top: 10%;"> Ub,V </p>
+			<p  class="labels" 
+				style="border-top: solid 1px #909090; 
+					   border-left: dashed 1px #909090;
+					   width: 8%;
+					   height: 10%;
+					   position: absolute;
+					   left: 60%; top: 10%;"> Uc,V </p>
+			<p  class="labels" 
+				style="border-top: solid 1px #909090; 
+					   border-left: dashed 1px #909090;
+					   width: 10%;
+					   height: 10%;
+					   position: absolute;
+					   left: 68%; top: 10%;"> Ib,mA </p>
+			<p  class="labels" 
+				style="border-top: solid 1px #909090; 
+					   border-left: dashed 1px #909090;
+					   width: 10%;
+					   height: 10%;
+					   position: absolute;
+					   left: 78%; top: 10%;"> Ic,mA </p>
+			<p  class="labels" 
+				style="border-top: solid 1px #909090; 
+					   border-left: dashed 1px #909090;
+					   border-right: solid 1px #909090;
+					   width: 10%;
+					   height: 10%;
+					   position: absolute;
+					   left: 88%; top: 10%;"> h21e </p>
+
+
+            <form action="" method="POST">
+                <div>
+                    <input class="text" type = "text" id="dname" name = "dname" size="8"
+                    style="border-left: solid 1px #909090; 
+                           border-bottom: solid 1px #909090;
+                           width: 20%;
+						   height: 10%;
+                           position: absolute;
+                           left: 2%; top: 18%;">
+                </div>
+                <div>
+                    <select id="type" class="text" 
+				        style="border-left: dashed 1px #909090; 
+					  	border-bottom: solid 1px #909090;
+					  	width: 20%;
+						height: 10%;
+					  	position: absolute;
+					  	left: 22%; top: 18%;">
+					<option value="NPN-BJT"> NPN-BJT</option>
+					<option value="PNP-BJT"> PNP-BJT</option>
+					<option value="N-JFET"> N-JFET</option>
+					<option value="P-JFET"> P-JFET</option>
+					<option value="N-MOSFET"> N-MOSFET</option>
+					<option value="P-MOSFET"> P-MOSFET</option>
+				</select>
+                </div>
+                
+                <div>
+                    <select id="type" class="text" 
+				        style="border-left: dashed 1px #909090; 
+					  	border-bottom: solid 1px #909090;
+					  	width: 10%;
+						height: 10%;
+					  	position: absolute;
+					  	left: 42%; top: 18%;">
+					<option value="A"> A </option>
+					<option value="B"> B </option>
+					<option value="C"> C </option>
+					<option value="D"> D </option>
+					<option value="E"> E </option>
+					<option value="F"> F </option>
+					<option value="G"> G </option>
+				</select>
+                </div>
+                <div>
+					<input class="text" type = "number" name="Ub" id="Ub" value="0" size="8"
+							style="border-left: dashed 1px #909090; 
+							   		border-bottom: solid 1px #909090;
+							   		width: 8%;
+									height: 10%;
+							  	 	position: absolute;
+							   		left: 52%; top: 18%;">
+				</div>
+				<div>
+					<input class="text" type = "number" name="Uc" id="Uc" value="0"  size="8"
+			   				style="border-left: dashed 1px #909090; 
+									border-bottom: solid 1px #909090;
+									width: 8%;
+									height: 10%;
+									position: absolute;
+									left: 60%; top: 18%;">
+				</div>
+				<div>
+					<input 	class="text" type = "number" name="Ib" id="Ib" value="0"  size="8"
+			   				style="border-left: dashed 1px #909090; 
+					  				border-bottom: solid 1px #909090;
+					  				width: 10%;
+									height: 10%;
+					  				position: absolute;
+					  				left: 68%; top: 18%;">
+				</div>
+                <div>
+                    <input class="text" type="number" name="Ic" id="Ic" value="0"  size="8"
+                           style="border-left: dashed 1px #909090; 
+                                  border-bottom: solid 1px #909090;
+                                  width: 10%;
+								  height: 10%;
+                                  position: absolute;
+                                  left: 78%; top: 18%;">
+                </div>
+                <div>
+                     <input class="text" type="number" name="h21e" id="h21e" value="0" size="8"
+			                style="border-left: dashed 1px #909090;
+			   		               border-right: solid 1px #909090; 
+					               border-bottom: solid 1px #909090;
+					               width: 10%;
+								   height: 10%;
+					               position: absolute;
+					               left: 88%; top: 18%;">
+                </div>
+            </form>
+            
+            <p style = "position:absolute; bottom:30%; width:100%; height: 15%; text-align: center; margin: 0px;">
+				<a href="smeas.html"> <button class = "button"> Accept </button> </a>
+                <a href="choose.html"> <button class = "button"> Back </button> </a>
+            </p>
+
+		</section>
+		
+		<footer class="other">
+			<p style = "position:absolute;bottom:-5px;left:50px;color:#b0b0b0">
+				Copyright © Your mother's friend's son. 2020
+			</p>
+		</footer>
+    
+	</body>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Semiconductor tester </title>
+    </head>
+
+    <body>
+		<header class="other">
+			<p class="other_heading"> - Create new device </p>
+        </header>
+    
+		<section class="other">
+			<p  class="labels" 
+				style="border-top: solid 1px #909090; 
+					   border-left: solid 1px #909090;
+					   width: 20%;
+					   height: 10%;
+					   position: absolute;
+					   left: 2%; top: 10%;">Device name</p>
+			<p  class="labels" 
+				style="border-top: solid 1px #909090; 
+					   border-left: dashed 1px #909090;
+					   width: 20%;
+					   height: 10%;
+					   position: absolute;
+					   left: 22%; top: 10%;">Device type</p>
+			<p  class="labels" 
+				style="border-top: solid 1px #909090; 
+					   border-left: dashed 1px #909090;
+					   width: 10%;
+					   height: 10%;
+					   position: absolute;
+					   left: 42%; top: 10%;"> Socket </p>
+			<p  class="labels" 
+				style="border-top: solid 1px #909090; 
+					   border-left: dashed 1px #909090;
+					   width: 8%;
+					   height: 10%;
+					   position: absolute;
+					   left: 52%; top: 10%;"> Ub,V </p>
+			<p  class="labels" 
+				style="border-top: solid 1px #909090; 
+					   border-left: dashed 1px #909090;
+					   width: 8%;
+					   height: 10%;
+					   position: absolute;
+					   left: 60%; top: 10%;"> Uc,V </p>
+			<p  class="labels" 
+				style="border-top: solid 1px #909090; 
+					   border-left: dashed 1px #909090;
+					   width: 10%;
+					   height: 10%;
+					   position: absolute;
+					   left: 68%; top: 10%;"> Ib,mA </p>
+			<p  class="labels" 
+				style="border-top: solid 1px #909090; 
+					   border-left: dashed 1px #909090;
+					   width: 10%;
+					   height: 10%;
+					   position: absolute;
+					   left: 78%; top: 10%;"> Ic,mA </p>
+			<p  class="labels" 
+				style="border-top: solid 1px #909090; 
+					   border-left: dashed 1px #909090;
+					   border-right: solid 1px #909090;
+					   width: 10%;
+					   height: 10%;
+					   position: absolute;
+					   left: 88%; top: 10%;"> h21e </p>
+
+            <div>
+                <select name="deviceName" id="deviceName" class="text" onclick="fillTextPoles()" 
+                style="border-left: solid 1px #909090; 
+                       border-bottom: solid 1px #909090;
+					   width: 20%;
+					   height: 10%;
+                       position: absolute;
+                       left: 2%; top: 20%;">
+				</select>
+				
+				<p  class="labels" 
+				style="border-bottom: solid 1px #909090; 
+					   border-left: dashed 1px #909090;
+					   width: 20%;
+					   height: 10%;
+					   position: absolute;
+					   left: 22%; top: 20%;">
+					   <label class="labels" id="deviceType" value=""></p>
+			<p  class="labels" 
+				style="border-bottom: solid 1px #909090; 
+					   border-left: dashed 1px #909090;
+					   width: 10%;
+					   height: 10%;
+					   position: absolute;
+					   left: 42%; top: 20%;">
+					   <label class="labels" id="Socket" value=""></p>
+			<p  class="labels" 
+				style="border-bottom: solid 1px #909090; 
+					   border-left: dashed 1px #909090;
+					   width: 8%;
+					   height: 10%;
+					   position: absolute;
+					   left: 52%; top: 20%;">
+					   <label class="labels" id="Ub" value=""></p>
+			<p  class="labels" 
+				style="border-bottom: solid 1px #909090; 
+					   border-left: dashed 1px #909090;
+					   width: 8%;
+					   height: 10%;
+					   position: absolute;
+					   left: 60%; top: 20%;">
+					   <label class="labels" id="Uc" value=""></p>
+			<p  class="labels" 
+				style="border-bottom: solid 1px #909090; 
+					   border-left: dashed 1px #909090;
+					   width: 10%;
+					   height: 10%;
+					   position: absolute;
+					   left: 68%; top: 20%;">
+					   <label class="labels" id="Ib" value=""></p>
+			<p  class="labels" 
+				style="border-bottom: solid 1px #909090; 
+					   border-left: dashed 1px #909090;
+					   width: 10%;
+					   height: 10%;
+					   position: absolute;
+					   left: 78%; top: 20%;">
+					   <label class="labels" id="Ic" value=""></p>
+			<p  class="labels" 
+				style="border-bottom: solid 1px #909090; 
+					   border-left: dashed 1px #909090;
+					   border-right: solid 1px #909090;
+					   width: 10%;
+					   height: 10%;
+					   position: absolute;
+					   left: 88%; top: 20%;">
+					   <label class="labels" id="h21e" value=""></p>
+
+            </div>
+            
+            <p style = "position:absolute;top:45%; width:100%; height: 15%; text-align: center; margin: 0px;">
+                <a href="smeas.html"> <button class = "button"> Accept </button> </a>
+                <a href="create.html"> <button class = "button"> Create new </button> </a>
+                <a href="mmenu.html"> <button class = "button"> Back </button> </a>
+            </p>
+
+		</section>
+		
+		<footer class="other">
+                <p style = "margin: 0px; position:absolute;bottom:10%;left:50px;color:#b0b0b0; font-size-adjust: inherit;">
+				Copyright © Your mother's friend's son. 2020
+			</p>
+		</footer>
+        <script>
+
+			let data = new Map();
+			let content = new Set();
+
+			let op;
+			let t;
+
+			data.set("KT315", ["NPN_BJT","A",5,25,1,100,120])
+			data.set("KT361", ["PNP_BJT","A",5,25,1,100,80])
+			data.set("KT3102",["NPN_BJT","B",5,27,1,100,160])
+			data.set("BC547", ["NPN_BJT","B",5,35,1,500,300])
+			data.set("BC557", ["PNP_BJT","B",5,35,1,500,250])
+			
+			
+			for(let i of data){
+				op = document.createElement("option")
+            	op.setAttribute("value",i[0])
+            	t = document.createTextNode(i[0])
+            	op.appendChild(t)
+            	document.getElementById("deviceName").appendChild(op)
+			}
+				let e = document.getElementById("deviceName")
+				let n = e.options[e.selectedIndex].value
+				let a = data.get(n)
+				document.getElementById("deviceType").textContent = a[0]
+				document.getElementById("Socket").textContent = a[1]
+				document.getElementById("Ub").textContent = a[2]
+				document.getElementById("Uc").textContent = a[3]
+				document.getElementById("Ib").textContent = a[4]
+				document.getElementById("Ic").textContent = a[5]
+				document.getElementById("h21e").textContent = a[6]
+
+
+
+			function fillTextPoles(){
+				let element = document.getElementById("deviceName")
+				let name = element.options[element.selectedIndex].value
+				let arr = data.get(name)
+				document.getElementById("deviceType").textContent = arr[0]
+				document.getElementById("Socket").textContent = arr[1]
+				document.getElementById("Ub").textContent = arr[2]
+				document.getElementById("Uc").textContent = arr[3]
+				document.getElementById("Ib").textContent = arr[4]
+				document.getElementById("Ic").textContent = arr[5]
+				document.getElementById("h21e").textContent = arr[6]
+			}
+            
+        </script>
+	</body>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</html>

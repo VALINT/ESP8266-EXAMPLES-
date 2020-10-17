@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Semiconductor tester </title>
+    </head>
+
+    <body>
+		<header class="other">
+			<p class="other_heading"> - Measure graph </p>
+        </header>
+    
+		<section class="other">
+
+            <canvas style = "position:absolute;top:5%;left:5%; width:90%; height: 70%;" id="graph">
+                
+            </canvas>
+
+            <p style = "position:absolute;top:80%;left:5%; width:50%; height: 15%; text-align: center; margin: 0px;">
+                <button class = "button" name="start_stop" id="start_stop" value="off" onclick="btnClick()"> </button>
+            </p>
+
+            <p style = "position:absolute;top:80%;left:45%; width:50%; height: 15%; text-align: center; margin: 0px;">
+                <a href="mmenu.html"> <button class = "button"> Back </button> </a>
+            </p>
+
+		</section>
+		
+		<footer class="other">
+                <p style = "margin: 0px; position:absolute;bottom:10%;left:50px;color:#b0b0b0; font-size-adjust: inherit;">
+				Copyright © Your mother's friend's son. 2020
+			</p>
+		</footer>
+    
+        <script>
+                let timeToEnd = 60
+                let btnStatus = document.getElementById("start_stop").value
+                if(btnStatus == "off") {
+                    document.getElementById("start_stop").textContent = "Start measurement"
+                }
+                else if(btnStatus == "on"){
+                    document.getElementById("start_stop").textContent = "Stop measurement"
+                }
+                
+                let screenWidth = screen.availWidth
+                let screenHeight= screen.availHeight
+
+                let canvasWidht  = 0.9*(screenWidth)
+                let canvasHeight = 0.7*(0.7 * screenHeight)
+
+                //console.log("Screen area")
+                //console.log(screenHeight)
+                //console.log(screenWidth)
+                
+                //console.log("Canvas area")
+                //console.log(canvasHeight)
+                //console.log(canvasWidht)
+                
+                let c = document.getElementById("graph")
+                c.height = canvasHeight
+                c.width  = canvasWidht
+                let ctx = c.getContext("2d")
+                
+                //ctx.beginPath
+                ctx.strokeStyle = "#909090"
+                ctx.beginPath()
+                ctx.moveTo(15, 15)
+                ctx.lineTo(15,          canvasHeight*0.95)
+                ctx.lineTo(canvasWidht, canvasHeight*0.95)
+                ctx.stroke()
+
+                function btnClick(){
+                    if(document.getElementById("start_stop").value == "off") {
+                        document.getElementById("start_stop").textContent = "Stop measurement"
+                        document.getElementById("start_stop").value = "on"
+                        drawGraph()
+                    }
+                    else{
+                        document.getElementById("start_stop").textContent = "Start measurement"
+                        document.getElementById("start_stop").value = "off"
+                    }
+                }
+
+                function drawGraph(){
+
+                    ctx.strokeStyle = "#FF00A5"
+                    ctx.lineWidth = 3
+                    ctx.beginPath()
+                    ctx.moveTo(20,  canvasHeight - 5)
+                    ctx.lineTo(40,  canvasHeight*0.90)
+                    ctx.lineTo(50,  canvasHeight*0.87)
+                    ctx.lineTo(70,  canvasHeight*0.83)
+                    ctx.lineTo(100, canvasHeight*0.80)
+                    ctx.lineTo(150, canvasHeight*0.75)
+                    ctx.lineTo(250, canvasHeight*0.70)
+                    ctx.lineTo(400, canvasHeight*0.69)
+                    ctx.lineTo(1200,canvasHeight*0.69)
+                    ctx.stroke()
+
+                    //ctx.beginPath
+                    ctx.strokeStyle = "#FFA500"
+                    ctx.lineWidth = 3
+                    ctx.beginPath()
+                    ctx.moveTo(20,  canvasHeight - 5)
+                    ctx.lineTo(40,  canvasHeight*0.70)
+                    ctx.lineTo(50,  canvasHeight*0.65)
+                    ctx.lineTo(70,  canvasHeight*0.60)
+                    ctx.lineTo(100, canvasHeight*0.55)
+                    ctx.lineTo(150, canvasHeight*0.50)
+                    ctx.lineTo(250, canvasHeight*0.45)
+                    ctx.lineTo(400, canvasHeight*0.44)
+                    ctx.lineTo(1200, canvasHeight*0.44)
+                    ctx.stroke()
+
+                    ctx.strokeStyle = "#00A5FF"
+                    ctx.lineWidth = 3
+                    ctx.beginPath()
+                    ctx.moveTo(20,  canvasHeight - 5)
+                    ctx.lineTo(40,  canvasHeight*0.45)
+                    ctx.lineTo(50,  canvasHeight*0.40)
+                    ctx.lineTo(70,  canvasHeight*0.35)
+                    ctx.lineTo(100, canvasHeight*0.30)
+                    ctx.lineTo(150, canvasHeight*0.25)
+                    ctx.lineTo(250, canvasHeight*0.20)
+                    ctx.lineTo(400, canvasHeight*0.19)
+                    ctx.lineTo(1200,canvasHeight*0.19)
+                    ctx.stroke()
+                }
+    
+            </script>
+
+	</body>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</html>
